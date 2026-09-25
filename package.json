@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-licenses",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open-source licenses MCP (SPDX).",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-licenses": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "licenses"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-licenses"
+    "url": "git+https://github.com/pipeworx-io/mcp-licenses.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-7a77e3b4a629a1d979c240fde2b8036038c21d35b2b28b61c7002f80f619eff9",
+    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
   }
 }
