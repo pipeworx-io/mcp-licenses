@@ -1,0 +1,58 @@
+[
+  {
+    "name": "lookup_license",
+    "description": "Look up an open-source license by its exact SPDX id (e.g. \"MIT\", \"Apache-2.0\", \"GPL-3.0-only\", \"BSD-3-Clause\"). Returns the full name, OSI/FSF approval, deprecation status, and reference URLs. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spdx_id": {
+          "type": "string",
+          "description": "An SPDX license id, e.g. \"Apache-2.0\"."
+        }
+      },
+      "required": [
+        "spdx_id"
+      ]
+    }
+  },
+  {
+    "name": "search_licenses",
+    "description": "Search the SPDX license list by keyword (matches the id or name), e.g. \"GPL\", \"creative commons\", \"mozilla\". Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Keyword to search."
+        },
+        "osi_only": {
+          "type": "boolean",
+          "description": "Only OSI-approved licenses (default false)."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results (1-100, default 25)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_license_text",
+    "description": "Fetch the full license text for an SPDX id (e.g. \"MIT\"). Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spdx_id": {
+          "type": "string",
+          "description": "An SPDX license id."
+        }
+      },
+      "required": [
+        "spdx_id"
+      ]
+    }
+  }
+]

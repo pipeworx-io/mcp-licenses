@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/licenses",
   "title": "Licenses",
   "description": "Open-source licenses MCP (SPDX).",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "websiteUrl": "https://pipeworx.io/packs/licenses",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-licenses",
